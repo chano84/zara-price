@@ -33,4 +33,13 @@ public class PriceParamDTO {
     public void setBrandId(Long brandId) {
         this.brandId = brandId;
     }
+
+    @Override
+    public String toString() {
+        return "PriceParamDTO{" +
+                "productId=" + productId +
+                ", date=" + date +
+                ", brandId=" + brandId +
+                '}';
+    }
 }
