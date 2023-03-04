@@ -22,7 +22,7 @@ public class PriceController {
 
     @GetMapping
     public List<Price> find(@ModelAttribute PriceCriteria priceCriteria){
-        return this.priceService.getAll();
+        return this.priceService.findByCriteria(priceCriteria);
     }
 
 }
