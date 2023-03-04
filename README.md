@@ -1,1 +1,1 @@
-# chano-price
+# chano-mvp
