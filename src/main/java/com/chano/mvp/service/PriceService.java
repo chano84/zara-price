@@ -16,6 +16,10 @@ public class PriceService {
         this.priceDAO = priceDAO;
     }
 
+    public List<Price> getAll(){
+        return this.priceDAO.getAll();
+        
+    }
     public List<Price> findByCriteria(PriceCriteria priceCriteria){
         return this.priceDAO.findByCriteria(priceCriteria);
     }

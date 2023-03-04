@@ -1,27 +1,43 @@
 package com.chano.mvp.model;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
  * Price Model
  */
+@Entity
+@Table(name = "prices")
 public class Price {
 
+    @Column(name = "id")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "brand_id")
     private Long brandId;
 
+    @Column(name = "start_date")
     private Date startDate;
 
+    @Column(name = "end_date")
     private Date endDate;
 
+    @Column(name = "price_list")
     private Long priceList;
 
+    @Column(name = "product_id")
     private Long productId;
 
+    @Column(name = "priority")
     private Long priority;
 
+    @Column(name = "price")
     private BigDecimal price;
 
+    @Column(name = "curr")
     private String curr;
 
 
