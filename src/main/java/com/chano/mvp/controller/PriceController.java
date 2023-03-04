@@ -1,5 +1,6 @@
 package com.chano.mvp.controller;
 
+import com.chano.mvp.controller.dto.PriceParamDTO;
 import com.chano.mvp.dao.filter.PriceCriteria;
 import com.chano.mvp.model.Price;
 import com.chano.mvp.service.PriceService;
@@ -21,8 +22,8 @@ public class PriceController {
     }
 
     @GetMapping
-    public List<Price> find(@ModelAttribute PriceCriteria priceCriteria){
-        return this.priceService.findByCriteria(priceCriteria);
+    public List<Price> find(@ModelAttribute PriceParamDTO priceParamDTO){
+        return this.priceService.findByCriteria(new PriceCriteria(priceParamDTO.getBrandId(),priceParamDTO.getDate(),priceParamDTO.getProductId()));
     }
 
 }

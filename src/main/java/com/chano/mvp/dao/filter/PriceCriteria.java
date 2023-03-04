@@ -10,6 +10,12 @@ public class PriceCriteria{
 
     private Long productId;
 
+    public PriceCriteria(Long brandId, Date date, Long productId){
+        this.brandId = brandId;
+        this.date = date;
+        this.productId = productId;
+    }
+    
     public Long getBrandId() {
         return brandId;
     }
@@ -32,5 +38,14 @@ public class PriceCriteria{
 
     public void setProductId(Long productId) {
         this.productId = productId;
+    }
+
+    @Override
+    public String toString() {
+        return "PriceCriteria{" +
+                "brandId=" + brandId +
+                ", date=" + date +
+                ", productId=" + productId +
+                '}';
     }
 }
