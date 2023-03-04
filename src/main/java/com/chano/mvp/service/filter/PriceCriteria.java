@@ -1,4 +1,4 @@
-package com.chano.mvp.dao.filter;
+package com.chano.mvp.service.filter;
 
 import java.util.Date;
 
@@ -15,7 +15,7 @@ public class PriceCriteria{
         this.date = date;
         this.productId = productId;
     }
-    
+
     public Long getBrandId() {
         return brandId;
     }

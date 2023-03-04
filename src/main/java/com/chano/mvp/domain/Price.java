@@ -1,4 +1,4 @@
-package com.chano.mvp.model;
+package com.chano.mvp.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

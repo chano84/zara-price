@@ -16,7 +16,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.chano.mvp.model");
+        sessionFactory.setPackagesToScan("com.chano.mvp.domain");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

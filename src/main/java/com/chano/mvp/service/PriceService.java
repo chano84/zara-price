@@ -1,8 +1,9 @@
 package com.chano.mvp.service;
 
 import com.chano.mvp.dao.PriceDAO;
-import com.chano.mvp.dao.filter.PriceCriteria;
-import com.chano.mvp.model.Price;
+import com.chano.mvp.domain.Price;
+import com.chano.mvp.service.filter.PriceCriteria;
+
 import org.jboss.logging.Logger;
 import org.springframework.stereotype.Service;
 

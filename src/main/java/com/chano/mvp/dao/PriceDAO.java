@@ -1,7 +1,8 @@
 package com.chano.mvp.dao;
 
-import com.chano.mvp.dao.filter.PriceCriteria;
-import com.chano.mvp.model.Price;
+import com.chano.mvp.domain.Price;
+import com.chano.mvp.service.filter.PriceCriteria;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.jboss.logging.Logger;

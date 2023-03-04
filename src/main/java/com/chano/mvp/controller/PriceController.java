@@ -2,9 +2,9 @@ package com.chano.mvp.controller;
 
 import com.chano.mvp.controller.dto.PriceDTO;
 import com.chano.mvp.controller.dto.PriceParamDTO;
-import com.chano.mvp.dao.filter.PriceCriteria;
-import com.chano.mvp.model.Price;
+import com.chano.mvp.domain.Price;
 import com.chano.mvp.service.PriceService;
+import com.chano.mvp.service.mapper.PricesMapper;
 import org.jboss.logging.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,13 +29,9 @@ public class PriceController {
     @GetMapping
     public List<PriceDTO> find(@ModelAttribute PriceParamDTO priceParamDTO) {
         logger.info("PriceController.find with params: ".concat(priceParamDTO.toString()));
-        List<Price> prices = this.priceService.findByCriteria(new PriceCriteria(priceParamDTO.getBrandId(),
-                priceParamDTO.getDate(),
-                priceParamDTO.getProductId()));
-        return prices.stream().map(price -> new PriceDTO(price.getBrandId(),
-                        price.getStartDate(), price.getEndDate(), price.getPriceList(),
-                        price.getProductId(), price.getPriority(), price.getPrice(),
-                        price.getCurr()))
+        PricesMapper pricesMapper = new PricesMapper();
+        List<Price> prices = this.priceService.findByCriteria(pricesMapper.toPriceCriteria(priceParamDTO));
+        return prices.stream().map(price -> pricesMapper.toDTO(price))
                 .collect(Collectors.toList());
     }
 
