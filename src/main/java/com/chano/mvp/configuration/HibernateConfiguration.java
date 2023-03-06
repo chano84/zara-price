@@ -25,6 +25,11 @@ public class HibernateConfiguration {
     @Value("${spring.datasource.driver-class-name}")
     private String driver;
 
+    @Value("${spring.datasource.dialect}")
+    private String dialect;
+
+    @Value("${spring.jpa.hibernate.ddl-auto}")
+    private String ddlAuto;
 
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
@@ -37,7 +42,6 @@ public class HibernateConfiguration {
 
     @Bean
     public DataSource dataSource() {
-        // Aquí configuramos el DataSource para conectarse a la base de datos
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(this.driver);
         dataSource.setUrl(this.host);
@@ -48,11 +52,11 @@ public class HibernateConfiguration {
 
     @Bean
     public Properties hibernateProperties() {
-        // Aquí configuramos las propiedades de Hibernate
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        properties.put("hibernate.dialect", this.dialect);
         properties.put("hibernate.show_sql", true);
         properties.put("hibernate.format_sql", true);
+        properties.put("hibernate.hbm2ddl.auto",this.ddlAuto);
         return properties;
     }
 
