@@ -14,6 +14,10 @@ public class PriceDTO {
     private BigDecimal price;
     private String curr;
 
+    public PriceDTO(){
+
+    }
+
     public PriceDTO(Long brandId, Date startDate, Date endDate, Long priceList, Long productId, Long priority,
                     BigDecimal price, String curr) {
         this.brandId = brandId;
