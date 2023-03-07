@@ -3,7 +3,6 @@ package com.chano.mvp.domain;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * Price Model

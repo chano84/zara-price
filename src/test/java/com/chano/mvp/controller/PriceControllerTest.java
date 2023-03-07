@@ -46,7 +46,6 @@ public class PriceControllerTest {
                 .andReturn();
         final List<PriceDTO> list = objectMapper.readValue(result.getResponse().getContentAsString(), new TypeReference<List<PriceDTO>>() {
         });
-
         Assert.assertEquals(list.size() , 2);
     }
 
@@ -70,7 +69,6 @@ public class PriceControllerTest {
      */
     @Test
     public void test4() throws Exception {
-
         final MvcResult result = this.mockMvc.perform(get("/prices?brandId=1&date=2020-06-15T10:00:00&productId=35455"))
                 .andReturn();
         final List<PriceDTO> list = objectMapper.readValue(result.getResponse().getContentAsString(), new TypeReference<List<PriceDTO>>() {
@@ -84,7 +82,6 @@ public class PriceControllerTest {
      */
     @Test
     public void test5() throws Exception {
-
         final MvcResult result = this.mockMvc.perform(get("/prices?brandId=1&date=2020-06-16T21:00:00&productId=35455"))
                 .andReturn();
         final List<PriceDTO> list = objectMapper.readValue(result.getResponse().getContentAsString(), new TypeReference<List<PriceDTO>>() {
