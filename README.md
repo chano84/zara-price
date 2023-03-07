@@ -1,1 +1,1 @@
-# chano-mvp ( ZARA  - Administracion de precios )
+# zara-mvp - Administracion de precios )
