@@ -1,6 +1,6 @@
-package com.chano.mvp.controller;
+package com.zara.mvp.controller;
 
-import com.chano.mvp.controller.dto.PriceDTO;
+import com.zara.mvp.controller.dto.PriceDTO;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;

@@ -1,4 +1,4 @@
-package com.chano.mvp;
+package com.zara.mvp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

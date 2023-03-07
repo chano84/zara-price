@@ -1,4 +1,4 @@
-package com.chano.mvp.configuration;
+package com.zara.mvp.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -35,7 +35,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.chano.mvp.domain");
+        sessionFactory.setPackagesToScan("com.zara.mvp.domain");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }

@@ -1,8 +1,8 @@
-package com.chano.mvp.service;
+package com.zara.mvp.service;
 
-import com.chano.mvp.dao.PriceDAO;
-import com.chano.mvp.domain.Price;
-import com.chano.mvp.service.filter.PriceCriteria;
+import com.zara.mvp.dao.PriceDAO;
+import com.zara.mvp.domain.Price;
+import com.zara.mvp.service.filter.PriceCriteria;
 
 import org.jboss.logging.Logger;
 import org.springframework.stereotype.Service;

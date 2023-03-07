@@ -1,10 +1,10 @@
-package com.chano.mvp.controller;
+package com.zara.mvp.controller;
 
-import com.chano.mvp.controller.dto.PriceDTO;
-import com.chano.mvp.domain.Price;
-import com.chano.mvp.service.PriceService;
-import com.chano.mvp.service.filter.PriceCriteria;
-import com.chano.mvp.service.mapper.PricesMapper;
+import com.zara.mvp.controller.dto.PriceDTO;
+import com.zara.mvp.domain.Price;
+import com.zara.mvp.service.PriceService;
+import com.zara.mvp.service.filter.PriceCriteria;
+import com.zara.mvp.service.mapper.PricesMapper;
 import org.jboss.logging.Logger;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
-package com.chano.mvp.dao;
+package com.zara.mvp.dao;
 
-import com.chano.mvp.domain.Price;
-import com.chano.mvp.service.filter.PriceCriteria;
+import com.zara.mvp.domain.Price;
+import com.zara.mvp.service.filter.PriceCriteria;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

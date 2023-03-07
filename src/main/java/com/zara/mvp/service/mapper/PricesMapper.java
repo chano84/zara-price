@@ -1,7 +1,7 @@
-package com.chano.mvp.service.mapper;
+package com.zara.mvp.service.mapper;
 
-import com.chano.mvp.controller.dto.PriceDTO;
-import com.chano.mvp.domain.Price;
+import com.zara.mvp.controller.dto.PriceDTO;
+import com.zara.mvp.domain.Price;
 
 public class PricesMapper {
 
