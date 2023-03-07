@@ -26,7 +26,7 @@ public class PriceControllerTest {
     private ObjectMapper objectMapper;
 
     /**
-     * Test 1: peticion a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
+     * Test 1: peticion a las 10:00 del dia 14 del producto 35455   para la brand 1 (ZARA)
      */
     @Test
     public void test1() throws Exception {
@@ -37,7 +37,7 @@ public class PriceControllerTest {
     }
 
     /**
-     *  Test 2: peticion a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)
+     *  Test 2: peticion a las 16:00 del dia 14 del producto 35455   para la brand 1 (ZARA)
      * @throws Exception
      */
     @Test
@@ -51,7 +51,7 @@ public class PriceControllerTest {
 
 
     /**
-     *  Test 3: peticion a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)
+     *  Test 3: peticion a las 21:00 del dia 14 del producto 35455   para la brand 1 (ZARA)
      * @throws Exception
      */
     @Test
@@ -64,7 +64,7 @@ public class PriceControllerTest {
     }
 
     /**
-     *  Test 4: peticion a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA)
+     *  Test 4: peticion a las 10:00 del dia 15 del producto 35455   para la brand 1 (ZARA)
      * @throws Exception
      */
     @Test
@@ -77,7 +77,7 @@ public class PriceControllerTest {
     }
 
     /**
-     *  Test 5: petici0n a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA)
+     *  Test 5: peticion a las 21:00 del dia 16 del producto 35455   para la brand 1 (ZARA)
      * @throws Exception
      */
     @Test
