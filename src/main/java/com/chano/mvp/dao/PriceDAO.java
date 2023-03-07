@@ -38,8 +38,8 @@ public class PriceDAO {
             predicateList.add(cb.equal(root.get("brandId"), criteria.getBrandId()));
         }
         if (criteria.getDate() != null) {
-            predicateList.add(cb.greaterThan(root.get("start_date"), criteria.getDate()));
-            predicateList.add(cb.lessThan(root.get("end_date"), criteria.getDate()));
+            predicateList.add(cb.lessThan(root.get("startDate"), criteria.getDate()));
+            predicateList.add(cb.greaterThan(root.get("endDate"), criteria.getDate()));
         }
         Predicate predicateResult = cb.and(predicateList.toArray(new Predicate[predicateList.size()]));
         cq.select(root).where(predicateResult);

@@ -1,13 +1,13 @@
 package com.chano.mvp.controller.dto;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class PriceDTO {
 
     private Long brandId;
-    private Date startDate;
-    private Date endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private Long priceList;
     private Long productId;
     private Long priority;
@@ -18,7 +18,7 @@ public class PriceDTO {
 
     }
 
-    public PriceDTO(Long brandId, Date startDate, Date endDate, Long priceList, Long productId, Long priority,
+    public PriceDTO(Long brandId, LocalDateTime startDate, LocalDateTime endDate, Long priceList, Long productId, Long priority,
                     BigDecimal price, String curr) {
         this.brandId = brandId;
         this.startDate = startDate;
@@ -39,19 +39,19 @@ public class PriceDTO {
         this.brandId = brandId;
     }
 
-    public Date getStartDate() {
+    public LocalDateTime getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDateTime startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDateTime getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDateTime endDate) {
         this.endDate = endDate;
     }
 

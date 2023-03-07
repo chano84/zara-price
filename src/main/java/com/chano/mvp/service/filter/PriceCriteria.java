@@ -1,16 +1,16 @@
 package com.chano.mvp.service.filter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class PriceCriteria{
 
     private Long brandId;
 
-    private Date date;
+    private LocalDateTime date;
 
     private Long productId;
 
-    public PriceCriteria(Long brandId, Date date, Long productId){
+    public PriceCriteria(Long brandId, LocalDateTime date, Long productId){
         this.brandId = brandId;
         this.date = date;
         this.productId = productId;
@@ -24,11 +24,11 @@ public class PriceCriteria{
         this.brandId = brandId;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

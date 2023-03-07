@@ -1,16 +1,15 @@
 package com.chano.mvp.controller;
 
 import com.chano.mvp.controller.dto.PriceDTO;
-import com.chano.mvp.controller.dto.PriceParamDTO;
 import com.chano.mvp.domain.Price;
 import com.chano.mvp.service.PriceService;
+import com.chano.mvp.service.filter.PriceCriteria;
 import com.chano.mvp.service.mapper.PricesMapper;
 import org.jboss.logging.Logger;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,10 +26,15 @@ public class PriceController {
     }
 
     @GetMapping
-    public List<PriceDTO> find(@ModelAttribute PriceParamDTO priceParamDTO) {
-        logger.info("PriceController.find with params: ".concat(priceParamDTO.toString()));
+    public List<PriceDTO> find(
+            @RequestParam(name = "date" , required=false) @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss") LocalDateTime date,
+            @RequestParam(name = "brandId", required=false) Long brandId,
+            @RequestParam(name = "productId", required=false) Long productId
+           ) {
+        PriceCriteria criteria = new PriceCriteria(brandId,date,productId);
+        logger.info("PriceController.find with params: ".concat(criteria.toString()));
         PricesMapper pricesMapper = new PricesMapper();
-        List<Price> prices = this.priceService.findByCriteria(pricesMapper.toPriceCriteria(priceParamDTO));
+        List<Price> prices = this.priceService.findByCriteria(criteria);
         return prices.stream().map(price -> pricesMapper.toDTO(price))
                 .collect(Collectors.toList());
     }
